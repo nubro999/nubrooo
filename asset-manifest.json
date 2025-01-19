@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nubrooo/static/css/main.a9da2183.css",
+    "main.js": "/nubrooo/static/js/main.5ddd9f62.js",
+    "index.html": "/nubrooo/index.html",
+    "main.a9da2183.css.map": "/nubrooo/static/css/main.a9da2183.css.map",
+    "main.5ddd9f62.js.map": "/nubrooo/static/js/main.5ddd9f62.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9da2183.css",
+    "static/js/main.5ddd9f62.js"
+  ]
+}
