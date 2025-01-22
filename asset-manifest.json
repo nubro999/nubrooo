@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/nubrooo/static/css/main.a9da2183.css",
-    "main.js": "/nubrooo/static/js/main.6be5afaa.js",
+    "main.js": "/nubrooo/static/js/main.36181ed9.js",
     "index.html": "/nubrooo/index.html",
     "main.a9da2183.css.map": "/nubrooo/static/css/main.a9da2183.css.map",
-    "main.6be5afaa.js.map": "/nubrooo/static/js/main.6be5afaa.js.map"
+    "main.36181ed9.js.map": "/nubrooo/static/js/main.36181ed9.js.map"
   },
   "entrypoints": [
     "static/css/main.a9da2183.css",
-    "static/js/main.6be5afaa.js"
+    "static/js/main.36181ed9.js"
   ]
 }
