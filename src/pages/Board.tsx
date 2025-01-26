@@ -44,7 +44,7 @@ const Board = () => {
 
     const handleCreatePost = async () => {
         try {
-            const res = await instance.post<Post>('${API_URL}/api/posts', newPost);
+            const res = await instance.post<Post>(`${API_URL}/api/posts`, newPost);
             const updatedPosts = [...posts, res.data];
             setPosts(updatedPosts);
             setFilteredPosts(updatedPosts);
