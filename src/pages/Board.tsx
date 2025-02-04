@@ -25,9 +25,13 @@ const Board = () => {
     const [newPost, setNewPost] = useState({ title: '', author: '', content: '', createAt: '', updateAt: '' });
 
     useEffect(() => {
+        console.log(API_URL);
 
-        console.log(API_URL)
-        axios.get<Post[]>(`${API_URL}/api/posts`)
+        axios.get<Post[]>(`${API_URL}/api/posts`, {
+            headers: {
+                'Content-Type': 'application/json', // 요청이 JSON 형식임을 명시
+            },
+        })
             .then((res) => {
                 setPosts(res.data); // res.data는 이제 Post[] 타입으로 추론됨
             })
@@ -35,6 +39,7 @@ const Board = () => {
                 console.error('Error fetching posts:', error);
             });
     }, []);
+
 
     useEffect(() => {
         setFilteredPosts(
