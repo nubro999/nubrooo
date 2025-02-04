@@ -25,6 +25,8 @@ const Board = () => {
     const [newPost, setNewPost] = useState({ title: '', author: '', content: '', createAt: '', updateAt: '' });
 
     useEffect(() => {
+
+        console.log(API_URL)
         axios.get<Post[]>(`${API_URL}/api/posts`)
             .then((res) => {
                 setPosts(res.data); // res.data는 이제 Post[] 타입으로 추론됨
