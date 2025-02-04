@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Search, Trash } from 'lucide-react';
+
 import { format } from 'date-fns'; // 날짜 포맷팅 라이브러리
 import axios from 'axios';
 import instance from "../api/axios";
@@ -24,10 +25,9 @@ const Board = () => {
     const [newPost, setNewPost] = useState({ title: '', author: '', content: '', createAt: '', updateAt: '' });
 
     useEffect(() => {
-        instance.get<Post[]>(`${API_URL}/api/posts`) // API_URL을 사용
+        axios.get<Post[]>(`${API_URL}/api/posts`)
             .then((res) => {
-                setPosts(res.data);
-                setFilteredPosts(res.data);
+                setPosts(res.data); // res.data는 이제 Post[] 타입으로 추론됨
             })
             .catch((error) => {
                 console.error('Error fetching posts:', error);
